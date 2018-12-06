@@ -1,0 +1,11 @@
+var fotos = {
+    "info": [
+        {
+           "codigo": ,
+           "pacote": ,
+           "qtde": ,
+           "duracao": ,
+           "preco": ,
+           "imagem":  
+        }
+]}
