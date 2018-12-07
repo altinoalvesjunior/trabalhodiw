@@ -5,21 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <title>Alterar/ Inserir</title>
 </head>
-<body>
+<body onload="preencherTabela()">
+    <header class="algo">
     <h1>Catálogo Fotográfico - 2019</h1>
-    <button id="new" onclick="chamaRegistro()" class="btn btn-warning" font-color: white>Novo</button>
+    <button id="new" onclick="chamaRegistro()" class="btn btn-warning">Novo</button>
+    </header>
     <div class="card">
         <div class="card-body">
             <table class="table table-hover" id="table">
-
+                
             </table>
         </div>
       </div>
-      <script src="javascript.js"></script>
-      <script src="fotos.json"></script>
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" id="ver" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <form>
+                <div class="form">
+                    <b>Pacote</b> <br> 
+                    <div id="t1"></div>
+                    <br>
+        
+                    <b>Quantidade de Fotos</b><br> 
+                    <div id="t2"></div> <br>
+        
+                    <b>Duração</b> <br> 
+                    <div id="t4"></div> <br>
+        
+                    <b>Valor</b> <br> <i>R$</i>
+                    <div id="t5"></div> <br>
+        
+                    <b>Envio</b> <br> 
+                    <div id="t3"></div><br>
+        
+                    <b>Local do Ensaio</b> <br> 
+                    <div id="t7"></div><br>
+        
+                    <b>Imagem</b><div><img src="" id="t6" class="upimagem"></div>
+                    <br>
+                  </div>
+        
+                  <div class="modal-footer">
+                      <button class="btn btn-success">Sair</button>
+                    </div>
+                </div>
+        
+        </div>
+        </div>
+        </div>
+        </form>
+
+          </div>
+        </div>
+      </div>
+
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="js/fotos.js"></script>
+      <script src="js/javascript.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,20 @@
+var fotos = {
+    "info": [
+        {
+           "pacote": "light" ,
+           "qtde": "18",
+           "duracao": "",
+           "preco": "180",
+           "envio": "correio",
+           "imagem":  "",
+           "local": "praca"
+        },
+        {
+            "pacote": "",
+            "qtde": "",
+            "duracao": "" ,
+            "preco": "",
+            "envio": "",
+            "imagem":  ""
+         }
+]}

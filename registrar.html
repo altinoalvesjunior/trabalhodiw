@@ -5,36 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>Registrar</title>
 </head>
-<body>
+<body onload="abrir()">
     <h1 class="text-secondary"><b>Cadastrar Pacote</b></h1>
     <hr style="height:2px; border:none; color:#000; background-color:#000; margin-top: 0px; margin-bottom: 0px;"/>
     <br>
     <form>
         <div class="form">
-<b>Pacote</b> <br> <input id="pacote" type="text" class="form-control"> <br>
-          <b>Quantidade de Fotos</b><br> <input id="qtde" type="text" class="form-control"> <br>
-          <b>Duração</b> <br> <input id="duracao" type="time" class="form-control"> <br>
+            <b>Pacote</b> <br> 
+            <input id="pacote" type="text" class="form-control"> <br>
 
-        <b>Valor</b> <br> <i>R$</i><input id="preco" type="number" class="form-control" > <br>
-      <b>Envio</b> <br> <input id="envio" type="text" name="envio" class="form-control"><br>
-          <b>Local do Ensaio</b> <br> <input type="text" class="form-control"><br>
-        <b>Imagem</b><input type="file">
-        <br>
+            <b>Quantidade de Fotos</b><br> 
+            <input id="qtde" type="text" class="form-control"> <br>
+
+            <b>Duração</b> <br> 
+            <input id="duracao" type="text" class="form-control"> <br>
+
+            <b>Valor</b> <br> <i>R$</i>
+            <input id="preco" type="number" class="form-control" > <br>
+
+            <b>Envio</b> <br> 
+            <input id="envio" type="text" class="form-control"><br>
+
+            <b>Local do Ensaio</b> <br> 
+            <input type="text" id="local" class="form-control"><br>
+
+            <b>Imagem</b><input onchange='openFile(event)' id="imagem" type="file">
+            <br>
           </div>
+
           <div class="modal-footer">
-              <button type="button" class="btn btn-success">Salvar Alterações</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+              <button class="btn btn-success" onclick="salvar()">Salvar Alterações</button>
+              <a href="main.html" class="btn btn-danger active" role="button" >Sair</a>
             </div>
         </div>
+        <img src="" id="output">
+
 </div>
 </div>
 </div>
 </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/fotos.js"></script> 
+    <script src="js/javascript.js"></script>
+    
 </body>
 
